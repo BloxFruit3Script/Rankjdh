@@ -1,0 +1,214 @@
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "ScreenGui"
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+ 
+local Toggle = Instance.new("TextButton")
+Toggle.Name = "Toggle"
+Toggle.Parent = ScreenGui
+Toggle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Toggle.Position = UDim2.new(0, 0, 0.454706937, 0)
+Toggle.Size = UDim2.new(0, 90, 0, 38)
+Toggle.Font = Enum.Font.SourceSans
+Toggle.Text = "Open/Closed"
+Toggle.TextColor3 = Color3.fromRGB(248, 248, 248)
+Toggle.TextSize = 28.000
+Toggle.Draggable = true
+Toggle.MouseButton1Click:connect(function()
+    Library:ToggleUI()
+end)
+ 
+local Corner = Instance.new("UICorner")
+Corner.Name = "Corner"
+Corner.Parent = Toggle
+
+local Window = Library.CreateLib("SimonScript", "BloodTheme")
+local Tab = Window:NewTab("Player Info")
+local Section = Tab:NewSection("Info")
+
+--Locals
+local playerName = game.Players.LocalPlayer.Name
+local placeName = game.PlaceId
+local playerId = game.Players.LocalPlayer.UserId
+local placeId = game.PlaceId
+local gameTime = os.date("%c", os.time())
+local placeId = game.PlaceId
+local player = game:GetService("Players").LocalPlayer
+local accountAge = player.AccountAge
+local executor = identifyexecutor() or "unknown"
+local currentDate = os.date("%Y-%m-%d")
+local gameName = game.Name
+
+--Tabs And Section
+local Tab1 = Window:NewTab("Info")
+local Section = Tab1:NewSection("PlayerInfo")
+local Section = Tab1:NewSection("UserName:" .. playerName)
+local Section = Tab1:NewSection("DisplayName: " .. player.DisplayName)
+local Section = Tab1:NewSection("UserID: " .. playerId)
+local Section = Tab1:NewSection("AccountAge: " .. accountAge)
+
+if table.find({Enum.Platform.Android}, game:GetService("UserInputService"):GetPlatform()) then 
+local Section = Tab1:NewSection("Device : Android")
+
+end
+
+if table.find({Enum.Platform.IOS}, game:GetService("UserInputService"):GetPlatform()) then 
+local Section = Tab1:NewSection("Device : IOS")
+
+end
+
+if table.find({Enum.Platform.Windows}, game:GetService("UserInputService"):GetPlatform()) then 
+local Section = Tab1:NewSection("Device : PC (Windows)")
+
+end
+
+if table.find({Enum.Platform.OSX}, game:GetService("UserInputService"):GetPlatform()) then 
+local Section = Tab1:NewSection("Device : PC (OSX or macOS)")
+
+end
+
+if table.find({Enum.Platform.Linux}, game:GetService("UserInputService"):GetPlatform()) then 
+local Section = Tab1:NewSection("Device : PC Linux")
+
+end
+
+if table.find({Enum.Platform.XBoxOne}, game:GetService("UserInputService"):GetPlatform()) then 
+local Section = Tab1:NewSection("Device : XBoxOne")
+
+end
+local Section = Tab1:NewSection("Game: " .. game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)
+local Section = Tab1:NewSection("PlaceId: " .. placeId)
+local Section = Tab1:NewSection("Date: " .. currentDate)
+local Section = Tab1:NewSection("executor: " .. executor)
+local Tab = Window:NewTab("Blox Fruit script")
+local Section = Tab:NewSection("Blox Fruit Script")
+Section:NewButton("Redz", "ButtonInfo", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BladeBallScripter/REDzHUBMAIN/main/REDZHUB"))()
+    print("Clicked")
+end)
+Section:NewButton("FruitNotifier", "ButtonInfo", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BloxFruit3Script/Fruit-Notifier/main/FREE-SCRIPT/FRUITNOTIFIERSCRIPT"))()
+    print("Clicked")
+end)
+Section:NewButton("Annie", "ButtonInfo", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BloxFruit3Script/Annie-Hub/main/AnnieHub"))()
+    print("Clicked")
+end)
+Section:NewButton("Auto bounty hunt", "ButtonInfo", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BloxFruit3Script/Auto-bounty-hunt/main/Script/AutoBountyhunt.lua.txt"))()
+    print("Clicked")
+end)
+Section:NewButton("Sukuna", "ButtonInfo", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BloxFruit3Script/SukunaHub/main/SukunaHub"))()
+    print("Clicked")
+end)
+Section:NewButton("Zen hub", "ButtonInfo", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BloxFruit3Script/Zen-Hub/main/v2/ZenHub"))()
+    print("Clicked")
+end)
+Section:NewButton("Banana hub", "ButtonInfo", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Nghia11n/Banana-Hub/main/bananahub.lua"))()
+    print("Clicked")
+end)
+Section:NewButton("Matsune Hub", "ButtonInfo", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Yatsuraa/Matsune/main/MatsuneV3.lua"))()
+    print("Clicked")
+end)
+Section:NewButton("Min Gaming", "ButtonInfo", function()
+loadstring(game:HttpGet"https://raw.githubusercontent.com/Basicallyy/Basicallyy/main/MinGamingV4.lua")()
+    print("Clicked")
+end)
+Section:NewButton("Maris Hub V1 and V2", "ButtonInfo", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/marisdeptrai/Script-Free/main/Maris-Hub'))()
+    print("Clicked")
+end)
+Section:NewButton("LuxuryHub", "ButtonInfo", function()
+loadstring(game: HttpGet ("https://raw.githubusercontent.com/markxd07/Luxury-Free/main/Auto_Kaitun.lua"))()
+    print("Clicked")
+end)
+local Tab = Window:NewTab("Blade Ball")
+local Section = Tab:NewSection("BladeBallScript")
+Section:NewButton("Script By Hyx team", "ButtonInfo", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/5fzg1LLH"))()
+    print("Clicked")
+end)
+Section:NewButton("Script By R4mpage", "ButtonInfo", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MagoKazinn/Makzinn_hub/main/makzinn_Hub"))()
+    print("Clicked")
+end)
+local Tab = Window:NewTab("MM2Script")
+local Section = Tab:NewSection("MM2Script")
+Section:NewButton("Vynix Script", "ButtonInfo", function()
+loadstring(game:GetObjects("rbxassetid://4001118261")[1].Source)()
+    print("Clicked")
+end)
+local Tab = Window:NewTab("BrookHeaven")
+local Section = Tab:NewSection("BrookHeavenScript")
+Section:NewButton("Ghub Script", "ButtonInfo", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/gclich/GHUBV14XZ/main/Ghub_Main_Loader.txt"))()
+    print("Clicked")
+end)
+Section:NewButton("Redz Hub", "ButtonInfo", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/REDzHUB/main/REDzHUB"))()
+    print("Clicked")
+end)
+local Tab = Window:NewTab("Player")
+local Section = Tab:NewSection("Player")
+Section:NewButton("Infinite yield", "ButtonInfo", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    print("Clicked")
+end)
+Section:NewButton("Fake AdminScript", "ButtonInfo", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/game-hax/uca/main/release/uca.min.lua"))()
+    print("Clicked")
+end)
+Section:NewToggle("Jump Power", "ToggleInfo", function(state)
+    if state then 
+game.Players.LocalPlayer.Character.Humanoid.JumpPower =500
+    else  
+game.Players.LocalPlayer.Character.Humanoid.JumpPower =50
+    end
+end)
+Section:NewToggle("WalkSpeed", "ToggleInfo", function(state)
+    if state then 
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed =500
+    else  
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed =50
+    end
+end)
+Section:NewButton("Reset", "Reser ur character", function()
+    game.Players.LocalPlayer.Character.Head:Destroy()
+end)
+Section:NewToggle("Infinite Jump", "Lets you infinitely jump", function()
+        local InfiniteJumpEnabled = true
+        game:GetService("UserInputService").JumpRequest:connect(function()
+            if InfiniteJumpEnabled then
+                game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+            end
+        end)
+    end)
+Section:NewDropdown("Teleport", "DropdownInf", {"Respawn", "SafeZone", "Starter"}, function(currentOption)
+    print(currentOption)
+end)
+
+local oldList = {
+  "2019",
+  "2020"
+}
+local newList = {
+  "2021",
+  "2022"
+}
+local dropdown = Section:NewDropdown("Dropdown","Info", oldList, function()
+
+end)
+Section:NewButton("Update Dropdown", "Refreshes Dropdown", function()
+  dropdown:Refresh(newList)
+end)
+local Tab = Window:NewTab("Credit")
+local Section = Tab:NewSection("Made By Simon")
+local Section = Tab:NewSection("Paid Script")
+local Section = Tab:NewSection("Youtube:@BaconBlox524")
+Section:NewButton("Discord Link", "ButtonInfo", function()
+          		setclipboard("https://discord.com/invite/SKjx3F3d") --Put The Link Here
